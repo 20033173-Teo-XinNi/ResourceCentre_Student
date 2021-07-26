@@ -149,11 +149,34 @@ public class ResourceCentreTest {
 	}
 	
 	@Test
-	public void testDoReturnCamcorder() {
-		//fail("Not yet implemented");
-		// write your code here
+    public void testDoReturnCamcorder() {
+        //fail("Not yet implemented");
+        // write your code here
+
+         //This will be the boundary
+        assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
+
+        //Error condition
+        ResourceCentre.addCamcorder(camcorderList, cc1);
+        Boolean isReturned = ResourceCentre.doReturnCamcorder(camcorderList, "CC0011");
+        assertFalse("Test if available Camcorder CC0011 is returned -false? " , isReturned);
+
+        //Normal condition
+        ResourceCentre.addCamcorder(camcorderList, cc2);
+        cc2.setIsAvailable(false);
+        isReturned = ResourceCentre.doReturnCamcorder(camcorderList, "CC0012");
+        assertTrue("Test if loaned out Camcorder CC0012 is returned- true", isReturned);
+
+
+        //Error condition
+        isReturned = ResourceCentre.doReturnCamcorder(camcorderList, "CC0013");
+        assertFalse("Test that if non-existing camcorder CC013 is returned - false?", isReturned);
+
+
+    }
 		
-	}
+		
+	
 	@Test
 	public void testDoReturnChromebook() {
 		//fail("Not yet implemented");
