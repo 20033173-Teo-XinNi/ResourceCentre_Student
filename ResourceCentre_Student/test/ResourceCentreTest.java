@@ -55,12 +55,12 @@ public class ResourceCentreTest {
 		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
 		
 		ResourceCentre.addChromebook(chromebookList, cb1);
-		assertEquals("Test if the Chromebook arraylist size is 1?", chromebookList.size());
+		assertEquals("Test if the Chromebook arraylist size is 1?", 1 ,  chromebookList.size());
 		
 		assertSame("Test that Chromebook is added same as the 1st item of the list?", cb1, chromebookList.get(0));
 		
 		ResourceCentre.addChromebook(chromebookList, cb2);
-		assertEquals("Test if the Chromebook arraylist size is 2?", chromebookList.size());
+		assertEquals("Test if the Chromebook arraylist size is 2?", 2, chromebookList.size());
 		assertSame("Test that Chromebook is added same as the 2nd item of the list?", cb2, chromebookList.get(1));
 	}
 	
@@ -110,8 +110,9 @@ public class ResourceCentreTest {
 		//test if the expected output string same as the list of chromebook retrieved from the SourceCentre
 		allChromebook = ResourceCentre.retrieveAllChromebook(chromebookList);
 		
-		testOutput = String.format("%-10s %-30s %-10s %-10s %-20s\n", "CB001", "ASUS Chromebook ", "Yes", "" , "Win 10");
-		testOutput = String.format("%-10s %-30s %-10s %-10s %-20s\n", "CB002", "HP Chromebook", "Yes", "" , "Win 10");
+		
+		testOutput = String.format("%-10s %-30s %-10s %-10s %-20s\n", "CB0011", "My Google Chromebook 1st", "Yes", "" , "Mac OS");
+		testOutput += String.format("%-10s %-30s %-10s %-10s %-20s\n", "CB0012", "SAMSUNG Chromebook 4+", "Yes", "" , "Win 10");
 		
 		assertEquals("Check that viewAllChromebookList", testOutput, allChromebook);
 		

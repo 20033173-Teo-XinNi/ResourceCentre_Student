@@ -10,8 +10,10 @@ public class ResourceCentre {
 
 		camcorderList.add(new Camcorder("CC001", "Sony HDR-CX405", 35));
 		camcorderList.add(new Camcorder("CC002", "Panasonic HC-MDH2", 10));
-		chromebookList.add(new Chromebook("CB001", "ASUS Chromebook ", "Win 10"));
-		chromebookList.add(new Chromebook("CB002", "HP Chromebook", "Win 10"));
+//		chromebookList.add(new Chromebook("CB001", "ASUS Chromebook ", "Win 10"));
+//		chromebookList.add(new Chromebook("CB002", "HP Chromebook", "Win 10"));
+		chromebookList.add(new Chromebook("CB0011", "My Google Chromebook 1st", "Mac OS"));
+		chromebookList.add(new Chromebook("CB0012", "SAMSUNG Chromebook 4+", "Win 10"));
 
 		int option = 0;
 
