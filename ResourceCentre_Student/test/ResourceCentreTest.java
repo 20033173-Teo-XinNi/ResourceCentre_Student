@@ -135,7 +135,7 @@ public class ResourceCentreTest {
 		cc2.setIsAvailable(false);
 		
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0012", "7-7-2021");
-		assertFalse("TEst that unavailable item is not ok to loan?", ok);
+		assertFalse("Test that unavailable item is not ok to loan?", ok);
 		
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0013", "7-7-2021");
 		assertFalse("Test that non existing item is not ok to loan?", ok);
